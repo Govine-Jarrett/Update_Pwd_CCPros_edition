@@ -53,7 +53,7 @@ class UpdatePasswordApp:
             cursor="arrow",
         )
         self.saveBtn.configure(
-            disabledforeground="#9b0a64",
+            disabledforeground="#000000",
             font="{@Microsoft JhengHei} 12 {}",
             foreground="#ffffff",
             justify="left",
@@ -73,17 +73,15 @@ class UpdatePasswordApp:
         self.updatePassBtn.configure(
             cursor="hand2",
             default="normal",
-            disabledforeground="#9b0a64",
+            disabledforeground="#000000",
             font="{@Microsoft JhengHei} 12 {}",
         )
         self.updatePassBtn.configure(
             foreground="#ffffff",
-            highlightbackground="#ff00ff",
-            highlightthickness=1,
             overrelief="flat",
         )
         self.updatePassBtn.configure(
-            relief="flat", state="normal", takefocus=True, text="Update Password"
+            relief="flat", state="normal", text="Update Password"
         )
         self.updatePassBtn.place(anchor="nw", relx=0.10, rely=0.60, width=250, x=0, y=0)
         self.updatePassBtn.configure(command=self.run_batch_script)
@@ -107,6 +105,7 @@ class UpdatePasswordApp:
             foreground="#008000",
             selectcolor="#ffffff",
             state="normal",
+            disabledforeground="#000000",
         )
         self.changePwdRatioBtn.configure(text="Change password")
         self.changePwdRatioBtn.place(anchor="nw", relx=0.52, rely=0.31, x=0, y=0)
@@ -116,7 +115,7 @@ class UpdatePasswordApp:
             background="#ffffff",
             compound="top",
             cursor="arrow",
-            disabledforeground="#f5010a",
+            disabledforeground="#000000",
         )
         self.dontChangePwdRatioBtn.configure(
             font="{@Microsoft YaHei} 9 {}",
@@ -135,7 +134,7 @@ class UpdatePasswordApp:
         self.UpdatePassword.geometry("370x490+400+100")
         self.UpdatePassword.iconphoto(True, self.img_regular)
         self.UpdatePassword.resizable(False, False)
-        self.UpdatePassword.title("Update Password - CCPros")
+        self.UpdatePassword.title("CCPros")
 
         # Main widget
         self.mainwindow = self.UpdatePassword
@@ -385,7 +384,7 @@ class UpdatePasswordApp:
         self.saveBtn.config(state="disabled")
         
         # Set the focus on the update password button
-        self.updatePassBtn.focus()
+        # self.updatePassBtn.focus()
 
 
         # Deciding which cursor to set for show password button
