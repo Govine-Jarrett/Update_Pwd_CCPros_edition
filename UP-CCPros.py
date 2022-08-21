@@ -135,7 +135,7 @@ class UpdatePasswordApp:
         self.UpdatePassword.geometry("370x490+400+100")
         self.UpdatePassword.iconphoto(True, self.img_regular)
         self.UpdatePassword.resizable(False, False)
-        self.UpdatePassword.title("Update Password - CCPros")
+        self.UpdatePassword.title("UPass-CCPros")
 
         # Main widget
         self.mainwindow = self.UpdatePassword
