@@ -23,3 +23,5 @@ def get_stored_pwd() -> str:
             pass
 
 
+# use to test the function.- PASSED
+# print(get_stored_pwd())

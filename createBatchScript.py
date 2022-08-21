@@ -1,10 +1,10 @@
 # Author: Govine I.T Solutions
 # Date: 20 August 2022
-# Description: This is used to create a batch script called changePwd.bat.
+# Description: This is used to create a batch script called main.bat.
 import os
 from readRootGits import get_stored_pwd as pwd
-SCRIPT_PATH = "update_admin_password\\res\\script"
-SCRIPT_NAME = "changePwd.bat"
+SCRIPT_PATH = "res/script/"
+SCRIPT_NAME = "main.bat"
 
 
 
@@ -15,7 +15,7 @@ new_pwd = pwd()
 
 def create_batch_script() -> None:
     """
-    This function is used to create a batch script called changePwd.bat.
+    This function is used to create a batch script called main.bat.
     """
     
     batch_script_data = f"@echo off\nREM This script is used to change the admin password of the system.\nnet user {username} {new_pwd}"
@@ -25,3 +25,6 @@ def create_batch_script() -> None:
     except Exception :
         pass
     # TODO: Log the error.
+    
+# Use to test the function. - PASSED
+# create_batch_script()
