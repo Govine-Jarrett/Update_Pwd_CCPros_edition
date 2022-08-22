@@ -186,7 +186,7 @@ class UpdatePasswordApp:
         # Check if the password is empty
         if pwd == "":
             # Create tk messagebox to show the user an error
-            messagebox.showinfo("Empty Password", "Password can't be empty")
+            messagebox.showinfo("CCPros - Empty", "Password can't be empty")
         # Check is password is secure enough
         elif len(pwd) > 0:
         
@@ -216,22 +216,29 @@ class UpdatePasswordApp:
             # Checking is any special characters are in the password
             if len(other_chars) > 0 or len(alpha_chars) < min_alpha_chars or len(digit_chars) < min_digit_chars:
                 # Create tk messagebox to show the user an error
-                messagebox.showinfo("Password is not secure enough", "The password must contain at least 5 letters and 3 digits with no special characters.")
+                messagebox.showinfo("CCPros - Weak Password", "The password must contain at least 5 letters and 3 digits with no special characters.")
 
             # Ask the user to confirm the password up
             else:
-                confirm_pwd = messagebox.askyesno("Confirm Password", "Are you sure you want to save the password?")
+                confirm_pwd = messagebox.askyesno("CCPros - Confirm Password", "Are you sure you want to save the password?")
                 
                 # check if the user confirmed the password
                 if confirm_pwd:
+                    
+                    # Deactivate the save button and entry widget
+                    self.deactivate_all_btn()
+                    
                     # save the password in the root.gits file
                     save_pwd(pwd) 
 
                     # Inform the user that the password was saved
-                    messagebox.showinfo("Password changed", "The password was saved successfully.\nPlease select the 'Update Password' or you can just exit. ")
+                    messagebox.showinfo("CCPros - Password Changed", "The password was saved successfully.")
                     
-                    # Deactivate the save button and entry widget
-                    self.deactivate_all_btn()
+                    # Letting the user know the the app will close.
+                    messagebox.showinfo("CCPros - Exiting App", "If you need to update the password just re-open this app and select 'Update Password'.")
+                    
+                    # Exit the app.
+                    self.mainwindow.destroy()
 
 
 
