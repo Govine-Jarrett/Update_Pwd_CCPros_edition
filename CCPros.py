@@ -216,7 +216,7 @@ class UpdatePasswordApp:
             # Checking is any special characters are in the password
             if len(other_chars) > 0 or len(alpha_chars) < min_alpha_chars or len(digit_chars) < min_digit_chars:
                 # Create tk messagebox to show the user an error
-                messagebox.showinfo("Password is not secure enough", "The password must contain at least 5 letters and 3 digits and no special characters.")
+                messagebox.showinfo("Password is not secure enough", "The password must contain at least 5 letters and 3 digits with no special characters.")
 
             # Ask the user to confirm the password up
             else:
@@ -226,10 +226,11 @@ class UpdatePasswordApp:
                 if confirm_pwd:
                     # save the password in the root.gits file
                     save_pwd(pwd)
-                    # saving the password in the batch script file
-                    self.run_batch_script()
                     # Inform the user that the password was saved
                     messagebox.showinfo("Password Saved", "The password was saved and updated automatically.")
+                    
+                    # saving the password in the batch script file
+                    self.run_batch_script()
                     # close the window
                     self.mainwindow.destroy()
 
