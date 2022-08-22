@@ -21,7 +21,7 @@ def run_script() -> None:
         check_in_pwd_changed = call(["net", "user", username, pwd])
         
         # check if the password is changed or not.
-        if check_in_pwd_changed != 2:
+        if check_in_pwd_changed == 0:
             # Sign out the user.
             log_off()
 
