@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "Update Password - CCP"
+name = "Update Password - CCPros"
 version = "0.1.0"
-description = "Change the password of any windows computer by a click of a button. Applicaton needs to be run as an adminstrator for it to work properly."
+description = "Change the password of any windows computer by a click of a button. Application needs to be run as an administrator for it to work properly."
 authors = ["Govine G. Jarrett <Govine I.T Solutions>"]
 license = "MIT"
 
