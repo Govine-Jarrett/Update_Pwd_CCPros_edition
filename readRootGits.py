@@ -15,12 +15,8 @@ def get_stored_pwd() -> str:
             password = f.read()
         return password
     else:
-        try:
-            no_file = "root.gits file not found"
-            with open(PWD_PATH + "error.txt", "w") as f:
-                f.write(no_file)
-        except Exception:
-            pass
+        # Return default password if root.gits not found
+        return "Password123"
 
 
 # use to test the function.- PASSED
