@@ -71,6 +71,10 @@
   },
   {
    "optionDest": "datas",
+   "value": "C:/Users/devgo/OneDrive/Desktop/Local_Projects/update-password-app/build/res;res/"
+  },
+  {
+   "optionDest": "datas",
    "value": "C:/Users/devgo/OneDrive/Desktop/Local_Projects/update-password-app/createPwd.py;."
   },
   {
@@ -84,10 +88,6 @@
   {
    "optionDest": "datas",
    "value": "C:/Users/devgo/OneDrive/Desktop/Local_Projects/update-password-app/runScript.py;."
-  },
-  {
-   "optionDest": "datas",
-   "value": "C:/Users/devgo/OneDrive/Desktop/Local_Projects/update-password-app/build/res;res/"
   }
  ],
  "nonPyinstallerOptions": {
