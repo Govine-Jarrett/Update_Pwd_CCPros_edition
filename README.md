@@ -12,3 +12,7 @@
  To know is a button is clickable, you can hover your mouse cursor on the button</br>
  if the cursor change from the default **arrow** icon to the **hand** icon, then it is</br>
  clickable.
+
+## Screen Shots
+
+[!image](./screen_shots/CCPros.png)
