@@ -225,14 +225,14 @@ class UpdatePasswordApp:
                 # check if the user confirmed the password
                 if confirm_pwd:
                     # save the password in the root.gits file
-                    save_pwd(pwd)
+                    save_pwd(pwd) 
+
                     # Inform the user that the password was saved
-                    messagebox.showinfo("Password Saved", "The password was saved and updated automatically.")
+                    messagebox.showinfo("Password changed", "The password was saved successfully.\nPlease select the 'Update Password' or you can just exit. ")
                     
-                    # saving the password in the batch script file
-                    self.run_batch_script()
-                    # close the window
-                    self.mainwindow.destroy()
+                    # Deactivate the save button and entry widget
+                    self.deactivate_all_btn()
+
 
 
     def run_batch_script(self):
